@@ -156,6 +156,8 @@ module OAuth
         @http = create_http(path)
         _uri = URI.parse(path)
         path = "#{_uri.path}#{_uri.query ? "?#{_uri.query}" : ""}"
+        puts "[oauth] request: #{path}"
+        debugger
       end
 
       # override the request with your own, this is useful for file uploads which Net::HTTP does not do
